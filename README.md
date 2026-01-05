@@ -30,7 +30,9 @@ The container serves a static HTML page using Nginx, displaying a confirmation m
 🐳 **Dockerfile**
 
 FROM nginx:latest
+
 COPY index.html /usr/share/nginx/html/index.html
+
 EXPOSE 80
 
 🌐 **index.html**
