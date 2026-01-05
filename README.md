@@ -1,4 +1,4 @@
-🚀 Dockerized Nginx Deployment on AWS EC2 (Ubuntu)
+<img width="1133" height="625" alt="image" src="https://github.com/user-attachments/assets/8cbb0457-f5e9-4b04-b7aa-91ff65a30004" />🚀 **Dockerized Nginx Deployment on AWS EC2 (Ubuntu)**
 📌 Project Overview
 
 <img width="1256" height="682" alt="ArchitectureDiagram" src="https://github.com/user-attachments/assets/04d01f95-48fe-4dfd-9c46-6fc6a07e4322" />
@@ -11,7 +11,7 @@ It covers the complete workflow from Docker image creation to cloud deployment, 
 
 The project is intentionally kept simple (no application framework) to focus on containerization, cloud infrastructure, and deployment fundamentals.
 
-🧰 Tech Stack
+🧰 **Tech Stack**
 
 Cloud Provider: AWS
 
@@ -29,16 +29,18 @@ docker-nginx-project/
 ├── Dockerfile
 └── index.html
 
-📝 Application Details
+📝 **Application Details**
 
 The container serves a static HTML page using Nginx, displaying a confirmation message that Docker is successfully running on AWS EC2.
 
-🐳 Dockerfile
+🐳 **Dockerfile**
+
 FROM nginx:latest
 COPY index.html /usr/share/nginx/html/index.html
 EXPOSE 80
 
-🌐 index.html
+🌐 **index.html**
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,7 +52,7 @@ EXPOSE 80
 </body>
 </html>
 
-☁️ AWS EC2 Setup
+☁️ **AWS EC2 Setup**
 
 AMI: Ubuntu 22.04 LTS
 
@@ -62,11 +64,13 @@ SSH (22) – My IP
 
 HTTP (80) – Anywhere
 
-🔐 Connect to EC2
+🔐 **Connect to EC2**
+
 chmod 400 mykey.pem
 ssh -i mykey.pem ubuntu@<EC2_PUBLIC_IP>
 
-🛠 Install Docker on EC2
+🛠 **Install Docker on EC2**
+
 sudo apt update
 sudo apt install docker.io -y
 sudo systemctl start docker
@@ -74,41 +78,42 @@ sudo systemctl enable docker
 sudo usermod -aG docker ubuntu
 exit
 
-
 Reconnect after logout.
 
-📂 Copy Project to EC2
+📂 **Copy Project to EC2**
+
 scp -i mykey.pem -r docker-nginx-project ubuntu@<EC2_PUBLIC_IP>:/home/ubuntu/
 
-🔨 Build Docker Image
+🔨 **Build Docker Image**
+
 cd docker-nginx-project
 docker build -t nginx-docker-demo .
 
 
 Verify:
 
-docker images
+**docker images**
 
-▶️ Run Docker Container
+▶️ **Run Docker Container**
+
 docker run -d -p 80:80 --name nginx-container nginx-docker-demo
 
 
-Check running containers:
+**Check running containers:**
 
 docker ps
 
-🌍 Access the Application
+**🌍 Access the Application**
 
-Open your browser:
+**Open your browser:**
 
 http://<EC2_PUBLIC_IP>
-
 
 You should see:
 
 Docker Nginx Deployed on AWS EC2
 
-📊 DevOps Concepts Demonstrated
+**📊 DevOps Concepts Demonstrated**
 
 Docker image creation using Dockerfile
 
@@ -122,7 +127,7 @@ Port mapping & networking
 
 Cloud-ready container deployment
 
-🔮 Future Enhancements
+**🔮 Future Enhancements**
 
 Push image to Docker Hub
 
@@ -135,14 +140,6 @@ Reverse proxy configuration
 CI/CD pipeline using Jenkins or GitHub Actions
 
 Kubernetes deployment (EKS)
-
-📸 Screenshots (Optional)
-
-Add screenshots here:
-
-EC2 instance running
-
-Docker container status
 
 Browser output
 
