@@ -1,4 +1,5 @@
 🚀 **Dockerized Nginx Deployment on AWS EC2 (Ubuntu)**
+
 📌 Project Overview
 
 <img width="1256" height="682" alt="ArchitectureDiagram" src="https://github.com/user-attachments/assets/04d01f95-48fe-4dfd-9c46-6fc6a07e4322" />
