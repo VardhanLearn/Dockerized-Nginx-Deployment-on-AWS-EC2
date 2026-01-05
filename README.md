@@ -14,17 +14,10 @@ The project is intentionally kept simple (no application framework) to focus on 
 
 🧰 **Tech Stack**
 
-Cloud Provider: AWS
+Cloud Provider: AWS     Compute Service: EC2  Operating System: Ubuntu 22.04 Containerization: Docker  Web Server: Nginx
 
-Compute Service: EC2
+📁 **Project Structure**
 
-Operating System: Ubuntu 22.04
-
-Containerization: Docker
-
-Web Server: Nginx
-
-📁 Project Structure
 docker-nginx-project/
 │
 ├── Dockerfile
