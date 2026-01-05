@@ -1,4 +1,4 @@
-<img width="1133" height="625" alt="image" src="https://github.com/user-attachments/assets/8cbb0457-f5e9-4b04-b7aa-91ff65a30004" />🚀 **Dockerized Nginx Deployment on AWS EC2 (Ubuntu)**
+🚀 **Dockerized Nginx Deployment on AWS EC2 (Ubuntu)**
 📌 Project Overview
 
 <img width="1256" height="682" alt="ArchitectureDiagram" src="https://github.com/user-attachments/assets/04d01f95-48fe-4dfd-9c46-6fc6a07e4322" />
